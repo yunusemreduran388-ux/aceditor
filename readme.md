@@ -2,11 +2,14 @@ Hi, it's 4 AM right now and I was developing software, but then I got tired of N
 
 first compile:
 
-### gcc aceditor.c -o ac.exe
-
+```powershell
+ gcc aceditor.c -o ac.exe
+```
 Then introduce it:
 
-### Copy-Item .\ac.exe C:\Windows\System32\ac.exe
+```PowerShell ADMINISTRATOR
+ Copy-Item .\ac.exe C:\Windows\System32\ac.exe
+```
 
 (Note: You must open PowerShell as ADMINISTRATOR)
 
