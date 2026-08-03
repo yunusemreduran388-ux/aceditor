@@ -140,7 +140,7 @@ void buildAndRun(EditorState *ed) {
                                           snprintf(command, sizeof(command), "g++ %s -o %s.exe && %s.exe", ed->filename, nameNoExt, nameNoExt);
     else if (strcmp(ext, ".asm") == 0 || strcmp(ext, ".s") == 0 || strcmp(ext, ".S") == 0) 
                                           snprintf(command, sizeof(command), "gcc %s -o %s.exe && %s.exe", ed->filename, nameNoExt, nameNoExt);
-
+    //If you want any other languages, you can add them here.
     // Modern Systems Languages
     else if (strcmp(ext, ".rs") == 0)     snprintf(command, sizeof(command), "rustc %s && %s.exe", ed->filename, nameNoExt);
     else if (strcmp(ext, ".go") == 0)     snprintf(command, sizeof(command), "go run %s", ed->filename);
@@ -202,6 +202,7 @@ void buildAndRun(EditorState *ed) {
     else if (strcmp(ext, ".tcl") == 0)    snprintf(command, sizeof(command), "tclsh %s", ed->filename);
     else if (strcmp(ext, ".awk") == 0)    snprintf(command, sizeof(command), "gawk -f %s", ed->filename);
     else if (strcmp(ext, ".vbs") == 0)    snprintf(command, sizeof(command), "cscript //Nologo %s", ed->filename);
+ 
 
     if (strlen(command) > 0) {
         disableRawMode();
